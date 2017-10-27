@@ -24,3 +24,8 @@ table a{
     height: 80px;
     background-image: url("header.jpg");
 }
+
+.imgList img{
+    width: 650px;
+    height: 350px;
+}
