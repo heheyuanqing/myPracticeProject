@@ -1,0 +1,26 @@
+body{
+    background-color: #F8FABF;
+}
+a {
+    color: darkred;
+}
+a:hover{
+    text-decoration: none
+}
+.panel-heading a{
+    margin-left: 90px;
+    font-size: 12px;
+}
+table a{
+    color: black;
+}
+
+.notice{
+    /*margin-top: 300px;*/
+    /*display: none;*/
+}
+
+.footer{
+    height: 80px;
+    background-image: url("header.jpg");
+}
