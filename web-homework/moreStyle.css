@@ -25,7 +25,36 @@ table a{
     background-image: url("header.jpg");
 }
 
+.imgContainer{
+    position: relative;
+}
 .imgList img{
     width: 650px;
     height: 350px;
+    position: absolute;
+}
+.imgList img{
+    opacity:0;
+
+}
+.imgList .img-on{
+    opacity: 1;
+}
+
+.spot{
+    position: absolute;
+    left: 45%;
+    bottom: 5px;
+}
+
+.spot span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #aaaaaa;
+    float: left;
+    margin-left: 5px;
+}
+.spot .on{
+    background-color: floralwhite;
 }
