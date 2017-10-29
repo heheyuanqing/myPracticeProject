@@ -64,13 +64,17 @@ function splotClick() {
     var indexList= document.getElementsByClassName("spot")[0].getElementsByTagName("span");
     var len = indexList.length;
 
-
+    for(var i=0;i<len;i++){
+        indexList[i].className = "";
+    }
 
     for (var i=0;i<len;i++){
-        indexList[i].onclick=function () {
-            index = indexList[i].getAttribute("index");
-            console.log(index);
-            indexList[index].className = "on";
-        }
+        (function (i) {
+          indexList[i].onclick=function () {
+              index = indexList[i].getAttribute("index");
+              console.log(index);
+              indexList[index].className = "on";
+          }
+      })(i)
     }
 }
