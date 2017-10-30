@@ -1,53 +1,78 @@
-body{
+body {
     background-color: #F8FABF;
 }
+
 a {
     color: darkred;
 }
-a:hover{
+
+a:hover {
     text-decoration: none
 }
-.panel-heading a{
+
+.panel-heading a {
     margin-left: 55%;
     font-size: 12px;
 }
-table a{
+
+table a {
     color: black;
 }
 
-.notice{
-    /*margin-top: 300px;*/
-    /*display: none;*/
+.notice table{
+    display: none;
 }
 
-.footer{
+.notice tr{
+    border-bottom: 1px dashed black;
+}
+
+.entry{
+    background-color: #F8FABF;
+}
+.footer {
     height: 80px;
     background-image: url("header.jpg");
 }
 
-.imgContainer{
+.imgContainer {
     position: relative;
 }
-.imgList img{
+
+.imgList img {
     width: 650px;
     height: 350px;
     position: absolute;
+    opacity: 0;
 }
-.imgList img{
-    opacity:0;
 
-}
-.imgList .img-on{
+.imgList .img-on {
     opacity: 1;
 }
 
-.spot{
+.text {
+    width: 650px;
+    background-color: rgba(60, 63, 65, 0.8);
+    color: darkred;
+    font-size: 20px;
+    position: relative;
+    opacity: 0;
+    text-align: center;
+}
+.text a{
+    position: absolute;
+}
+.text .text-on {
+    opacity: 1;
+}
+
+.spot {
     position: absolute;
     left: 45%;
     bottom: 5px;
 }
 
-.spot span{
+.spot span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -55,6 +80,7 @@ table a{
     float: left;
     margin-left: 5px;
 }
-.spot .on{
+
+.spot .on {
     background-color: floralwhite;
 }

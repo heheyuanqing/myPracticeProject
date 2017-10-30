@@ -3,6 +3,7 @@ var timer;
 
 window.onload = function () {
     carousel();
+    //slide();
 
 };
 
@@ -52,6 +53,16 @@ function changeIndex(index) {
 
 }
 
+function changeText(index) {
+    var textList = document.getElementsByClassName("text")[0].getElementsByTagName("a");
+    var len = textList.length;
+
+    for (var i = 0; i < len; i++) {
+        textList[i].className = "";
+    }
+
+    indexList[index - 1].className = "text-on";
+}
 function nextMove() {
 
     index += 1;
@@ -80,4 +91,12 @@ function splotClick() {
             }
         })(i)
     }
+}
+
+function slide() {
+    var notice = document.getElementsByClassName("notice")[0];
+    var table = notice.getElementsByTagName("table");
+    var panelH = notice.style.height;
+
+    console.log(table.style.marginTop);
 }
