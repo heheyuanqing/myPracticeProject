@@ -27,8 +27,12 @@ table a {
     border-bottom: 1px dashed black;
 }
 
-.entry{
-    background-color: #F8FABF;
+ul{
+    list-style: none;
+    margin-left: -50px;
+}
+li{
+    margin-top: 10px;
 }
 .footer {
     height: 80px;
