@@ -7,6 +7,7 @@ a {
 }
 
 a:hover {
+    color: #ca3a11;
     text-decoration: none
 }
 
@@ -19,14 +20,21 @@ table a {
     color: black;
 }
 
-.notice table{
-    display: none;
-}
-
 .notice tr{
     border-bottom: 1px dashed black;
 }
 
+.notice{
+    overflow: hidden;
+}
+.content{
+   position: relative;
+}
+
+
+ul a{
+    color: black;
+}
 ul{
     list-style: none;
     margin-left: -50px;
@@ -34,9 +42,21 @@ ul{
 li{
     margin-top: 10px;
 }
+.panel-body li{
+    margin-left: 5px;
+    border-bottom: 1px dashed;
+}
+
 .footer {
-    height: 80px;
+    position: relative;
+    height: 90px;
     background-image: url("header.jpg");
+}
+.version{
+    width: 200px;
+    position: absolute;
+    top: 30%;
+    left:45%;
 }
 
 .imgContainer {
