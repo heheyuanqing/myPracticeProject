@@ -50,7 +50,7 @@ li{
 .footer {
     position: relative;
     height: 90px;
-    background-image: url("img/header.jpg");
+    background-image: url("../img/header.jpg");
 }
 .version{
     width: 200px;
