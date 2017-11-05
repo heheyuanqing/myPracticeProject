@@ -1,0 +1,29 @@
+
+.container{
+    background-color: #00B7FF;
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.title{
+   width: 90px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.input-group{
+margin-bottom: 10px;
+
+}
+
+.tip{
+    margin-left: 120px;
+}
+
