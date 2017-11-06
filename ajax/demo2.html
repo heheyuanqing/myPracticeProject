@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax </title>
+</head>
+<body>
+    <div id="myDiv">
+        <p>获取sign in 页面的信息</p>
+    </div>
+    <button onclick="loadXmlDoc()">点击实现</button>
+    <script>
+        var loadXmlDoc = () => {
+            var xmlHttp;
+            if(window.XMLHttpRequest){
+                xmlHttp = new XMLHttpRequest();
+            }
+            else {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            console.log(xmlHttp);
+            xmlHttp.onreadystatechange = ()=> {
+                if (xmlHttp.readyState ===4 &&xmlHttp.status===200){
+                    document.getElementById("myDiv").innerHTML = xmlHttp.responseText;
+                }
+            };
+            xmlHttp.open("GET","http://localhost:63342/code/project/ajax/test/bbb.html?_ijt=4po0rlhonhtdime8id367ut6i2",true);
+            xmlHttp.send();
+        }
+    </script>
+</body>
+</html>

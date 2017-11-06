@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax 从txt文件中获取数据</title>
+</head>
+<body>
+    <div id="name"><p>今天是个好日子阿</p></div>
+    <button id="btn" onclick="loadXMLDoc()">点击改变网页信息</button>
+    <script>
+        var loadXMLDoc = ()=>{
+
+            var xmlHttp;
+            if(window.XMLHttpRequest){
+                xmlHttp = new XMLHttpRequest();
+            }
+            else{
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlHttp.onreadystatechange = function(){
+                if (xmlHttp.readyState ===4 && xmlHttp.status === 200){
+                    document.getElementById("name").innerHTML = xmlHttp.responseText;
+                }
+            };
+            xmlHttp.open("GET","/code/project/ajax/test/aaa.txt",true);
+            xmlHttp.send();
+
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+    <style type="text/css">
+        div{
+            margin-top: 10px;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>在输入框中输入字母</div>
+        <div>
+            <span>查找姓名：</span>
+            <input type="text" placeholder="输入单个字母，如:a">
+            <button onclick="searchInfo()">查询</button>
+            <div>
+                <span>查找结果：</span>
+                <span id="searchReasult"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var searchInfo = ()=> {
+            var xmlHttp ;
+
+            if (window.XMLHttpRequest){
+                xmlHttp = new XMLHttpRequest();
+            }
+            else{
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlHttp.onreadystatechange = () => {
+                if (xmlHttp.readyState === 4&&xmlHttp.status === 200){
+                    document.getElementById("searchResult").innerHTML = xmlHttp.responseText;
+                }
+            };
+
+            xmlHttp.open("GET",url,true);
+            xmlHttp.send();
+
+        };
+    </script>
+</body>
+</html>
