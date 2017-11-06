@@ -21,3 +21,19 @@
 
 
 #### sign-in&up
+
+&emsp;&emsp;
+
+##### &emsp;&emsp;- 完成登录/注册的静态页面
+
+&emsp;&emsp;
+
+&emsp;&emsp;
+
+&emsp;&emsp;
+
+#### ajax
+
+&emsp;&emsp;
+
+#### &emsp;&emsp;-使用ajax获取txt以及html文件进行对当前页面的修改
