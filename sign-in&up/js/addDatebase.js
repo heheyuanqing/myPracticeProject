@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-app.get('../view/sign-up.html',function (req,res) {
+app.get('/sign-up.html',function (req,res) {
     var postData = "";
     req.addListener("data",function (postDataChunk) {
         postData +=postDataChunk;
@@ -10,3 +10,6 @@ app.get('../view/sign-up.html',function (req,res) {
         console.log(postData);
     });
 });
+app.listen(3000,function () {
+    console.log(1111);
+})
