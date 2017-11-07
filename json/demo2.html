@@ -5,9 +5,41 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JSON 数组操作</title>
+    <title>JSON parse()</title>
 </head>
 <body>
+<div style="width: 500px;height: 500px;margin: 0 auto">
+    <div> 姓名：<span id="name">XXX</span></div>
+    <div> 年龄：<span id="age">XXX</span></div>
+    <div style="margin-bottom: 10px"> 性别：<span id="sex">XXX</span></div>
+    <button id="btn">点击改变信息</button>
+</div>
+
+<script>
+   document.getElementById("btn").onclick =() => {
+        var xmlHTTP;
+
+        if (window.XMLHttpRequest){
+            xmlHTTP = new XMLHttpRequest();
+        }
+        else{
+            xmlHTTP = new ActiveXObject();
+        }
+        console.log(xmlHTTP);
+
+        xmlHTTP.onreadystatechange =  () => {
+            if (this.readyState === 4&&this.status === 200){
+
+                myObj = JSON.parse(xmlHTTP.responseText);
+                document.getElementById("name").innerHTML = myObj.name;
+                document.getElementById("age").innerHTML = myObj.age;
+                document.getElementById("sex").innerHTML = myObj.sex;
+            }
+            xmlHTTP.open("GET","/code/project/json/test/aaa.txt",true);
+            xmlHTTP.send();
+        };
+    }
+</script>
 
 </body>
 </html>
