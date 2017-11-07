@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON 对象操作</title>
+</head>
+<body>
+    <div class="content" style="margin-bottom: 10px"></div>
+    <button id="btn_recover">点击显示信息</button>
+    <button id="btn_change">点击修改信息</button>
+    <button id="btn_delete">点击删除信息</button>
+
+    <script>
+        var myObj = {"name":"hyq","age":3,"sex":"girl"};
+        var content = document.getElementsByClassName("content")[0];
+
+        //显示对象的内容
+        document.getElementById("btn_recover").onclick = () => {
+          for (x in myObj){
+              content.innerHTML += x + ":" + myObj[x]+"<br\>";
+          }
+        };
+        //修改对象内容
+        document.getElementById("btn_change").onclick = () => {
+            myObj.name = "hyy";
+            content.innerHTML = "";
+            for (x in myObj){
+                content.innerHTML += x + ":" + myObj[x]+"<br\>";
+            }
+        };
+        //删除对象内容
+        document.getElementById("btn_delete").onclick = () => {
+            delete myObj.name;
+            content.innerHTML = "";
+            for (x in myObj){
+                content.innerHTML += x + ":" + myObj[x]+"<br\>";
+            }
+        }
+    </script>
+</body>
+</html>
