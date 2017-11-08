@@ -11,7 +11,8 @@
 <div style="width: 500px;height: 500px;margin: 0 auto">
     <div> 姓名：<span id="name">XXX</span></div>
     <div> 年龄：<span id="age">XXX</span></div>
-    <div style="margin-bottom: 10px"> 性别：<span id="sex">XXX</span></div>
+    <div> 性别：<span id="sex">XXX</span></div>
+    <div style="margin-bottom: 10px"> 性别：<span id="score">XXX</span></div>
     <button id="btn">点击改变信息</button>
 </div>
 
@@ -23,21 +24,23 @@
             xmlHTTP = new XMLHttpRequest();
         }
         else{
-            xmlHTTP = new ActiveXObject();
+            xmlHTTP = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        console.log(xmlHTTP);
 
         xmlHTTP.onreadystatechange =  () => {
-            if (this.readyState === 4&&this.status === 200){
 
+            if (xmlHTTP.readyState === 4&&xmlHTTP.status === 200){
                 myObj = JSON.parse(xmlHTTP.responseText);
+                myObj.calculate=eval("("+myObj.calculate+")");
                 document.getElementById("name").innerHTML = myObj.name;
                 document.getElementById("age").innerHTML = myObj.age;
                 document.getElementById("sex").innerHTML = myObj.sex;
+                document.getElementById("score").innerHTML = myObj.calculate(myObj.Math,myObj.English,myObj.Chinese);
+
             }
-            xmlHTTP.open("GET","/code/project/json/test/aaa.txt",true);
-            xmlHTTP.send();
         };
+       xmlHTTP.open("GET","/code/project/json/test/aaa.txt",true);
+       xmlHTTP.send();
     }
 </script>
 

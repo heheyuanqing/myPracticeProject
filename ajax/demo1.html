@@ -9,9 +9,9 @@
 </head>
 <body>
     <div id="name"><p>今天是个好日子阿</p></div>
-    <button id="btn" onclick="loadXMLDoc()">点击改变网页信息</button>
+    <button id="btn">点击改变网页信息</button>
     <script>
-        var loadXMLDoc = ()=>{
+        document.getElementById("btn").onclick = ()=>{
 
             var xmlHttp;
             if(window.XMLHttpRequest){

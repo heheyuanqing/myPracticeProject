@@ -1,1 +1,1 @@
-{"name":"hyq","age":5,"sex":"girl"}
+{"name":"hyq","age":5,"sex":"girl","Math":99,"English":100,"Chinese":98,"calculate":"function(m,e,c){return m+e+c}"}

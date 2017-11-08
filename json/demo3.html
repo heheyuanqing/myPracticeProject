@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON.stringify</title>
+</head>
+<body>
+    <p>JSON.stringify()对各种JSON数据的处理方式</p>
+    <span>JSON中包含Date对象时：</span><div id="example_1"></div>
+    <span>JSON中包含函数时：</span><div id="example_2"></div>
+    <span>JSON中包含函数且保留函数时：</span><div id="example_3"></div>
+
+    <script>
+        var myObj={"name":"hyq","time":new Date(),"Math":99,"English":88,"Chinese":99,"calculate":function(m,e,c){return m+e+c;}};
+        var myJson = JSON.stringify(myObj);
+
+        document.getElementById("example_1").innerHTML = myJson;
+        document.getElementById("example_2").innerHTML = myJson;
+
+        myObj.calculate = myObj.calculate.toString();
+
+        var myJson_2 = JSON.stringify(myObj);
+        document.getElementById("example_3").innerHTML = myJson_2;
+    </script>
+</body>
+</html>
