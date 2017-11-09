@@ -41,13 +41,14 @@
                 xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
 
+            console.log(xmlHttp);
             xmlHttp.onreadystatechange = () => {
                 if (xmlHttp.readyState === 4&&xmlHttp.status === 200){
                     document.getElementById("searchResult").innerHTML = xmlHttp.responseText;
                 }
             };
 
-            xmlHttp.open("GET",url,true);
+            xmlHttp.open("GET","/code/project/ajax/test/ccc.txt",true);
             xmlHttp.send();
 
         };
