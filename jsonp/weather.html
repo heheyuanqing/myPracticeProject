@@ -7,44 +7,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>天气预报</title>
     <style>
-        .container{
+        .container {
             width: 500px;
             height: 600px;
             margin: 0 auto;
         }
-        input{
+
+        input {
             height: 25px;
         }
-        button{
+
+        button {
             height: 30px;
         }
+
         table {
             margin-top: 20px;
             border: solid 1px;
             width: 500px;
             text-align: center;
         }
-        table td{
+
+        table td {
             border: solid 1px;
         }
     </style>
+
+    <script type="text/javascript">
+
+               var forecast = function (data) {
+                   alert(data.result.city + "的实时温度为为：" + data.result.temp + "摄氏度");
+               };
+
+               var APPKEY = "your_appkey_here";
+               var city = "安顺";
+               var url = "http://api.jisuapi.com/weather/query";
+
+               var script = document.createElement("script");
+               script.setAttribute('src', url+"?appkey="+APPKEY+"&city="+city);
+               document.getElementsByTagName('head')[0].appendChild(script);
+
+
+    </script>
 </head>
 <body>
-    <div class="container">
-        <form>
-            <input type="text">
-            <button>点击查询</button>
-        </form>
+<div class="container">
+    <form>
+        <input type="text">
+        <button id="btn">点击查询</button>
+    </form>
 
-        <div>
-            <table cellspacing="0">
-                <tr>
-                    <td>日期</td>
-                    <td>天气</td>
-                    <td>温度</td>
-                </tr>
-            </table>
-        </div>
+    <div>
+        <table cellspacing="0">
+            <tr>
+                <td>日期</td>
+                <td>天气</td>
+                <td>温度</td>
+            </tr>
+        </table>
     </div>
+</div>
 </body>
 </html>
