@@ -37,3 +37,25 @@
 &emsp;&emsp;
 
 #### &emsp;&emsp;-使用ajax获取txt以及html文件进行对当前页面的修改
+
+&emsp;&emsp;
+
+&emsp;&emsp;
+
+####JSON
+
+&emsp;&emsp;
+
+####&emsp;&emsp;- 对JSON数据进行解析
+
+&emsp;&emsp;
+
+&emsp;&emsp;
+
+&emsp;&emsp;
+
+####JSONP
+
+&emsp;&emsp;
+
+####&emsp;&emsp; - 完成静态页面，使用JSONP进行跨域访问
