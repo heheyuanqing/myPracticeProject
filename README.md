@@ -59,3 +59,4 @@
 &emsp;&emsp;
 
 #### &emsp;&emsp; - 完成静态页面，使用JSONP进行跨域访问
+#### &emsp;&emsp; - 将JSONP进行封装
