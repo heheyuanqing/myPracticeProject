@@ -6,15 +6,56 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>邮编查询</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        .title {
+            margin-left: 100px;
+        }
+
+        #result {
+            margin-top: 20px;
+
+        }
+    </style>
+    <script src="Jsonp.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div>邮编查询</div>
-        <form>
-            <span>城市</span><input type="text">
-            <button>查询</button>
-        </form>
-        <div id="reslut"></div>
+<div class="container">
+    <div class="title">邮编查询</div>
+    <form>
+        <span>邮政编码：</span><input type="text" id="zipcode" value="310012">
+        <input type="button" id="btn" value="查询">
+    </form>
+    <div id="result">
+
     </div>
+</div>
+<script src="Jsonp.js"></script>
+<script>
+        var zipcode = document.getElementById("zipcode").value;
+        document.getElementById("btn").addEventListener('click', function () {
+            jsonp({
+                url: "http://api.jisuapi.com/zipcode/query",
+                appkey: "d06f93228c91fe10",
+                zipcode: zipcode,
+                callback:"emerge",
+
+            });
+
+        }, false);
+
+
+        function emerge(data) {
+            document.getElementById("result").innerHTML = zipcode + "是"+data.result[0].province+"省"+data.result[0].city+"市"+data.result[0].town+"\n"+
+                data.result[0].address+"\n"+data.result[1].address+"\n"+data.result[2].address+"\n"+data.result[3].address+"\n"+data.result[4].address;
+
+        }
+
+</script>
 </body>
 </html>
