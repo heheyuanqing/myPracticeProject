@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机归属地查询</title>
+    <style type="text/css">
+        .container {
+            width: 500px;
+            height: 800px;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 25px;
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        .chaxun {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title">手机归属地查询</div>
+    <div class="chaxun">
+        <span>请输入手机号码</span>
+        <input type="text" class="num">
+        <input type="button" value="查询" id="btn">
+    </div>
+    <div class="result"></div>
+</div>
+
+<script>
+    var btn = document.getElementById("btn");
+    var result = document.getElementsByClassName("result")[0];
+
+    btn.addEventListener('click', function () {
+        var xmlHttp;
+        var num = document.getElementsByClassName("num")[0].value;
+        var url = "http://api.jisuapi.com/shouji/query?appkey=d06f93228c91fe10&shouji="+num;
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        }
+        else {
+            xmlH = new ActiveXObject("Microsoft.XMLHttp");
+        }
+
+        xmlHttp.onreadystatechange = function () {
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                var json = JSON.parse(xmlHttp.responseText);
+                result.innerHTML = "归属地为" + json.result.province + json.result.city;
+            }
+        };
+        xmlHttp.open("GET", url,true);
+        xmlHttp.send();
+
+        //在服务端设置 Access-Control-Allow-Origin 解决跨域问题
+
+    }, false);
+</script>
+</body>
+</html>

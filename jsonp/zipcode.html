@@ -38,23 +38,26 @@
 <script src="Jsonp.js"></script>
 <script>
         var zipcode = document.getElementById("zipcode").value;
+        var oresult = document.getElementById("result");
+
         document.getElementById("btn").addEventListener('click', function () {
             jsonp({
                 url: "http://api.jisuapi.com/zipcode/query",
                 appkey: "d06f93228c91fe10",
                 zipcode: zipcode,
-                callback:"emerge",
-
+                time:10000,
+                success:function (data) {
+//                    console.log(data);
+                    oresult.innerHTML = zipcode + "是"+data.result[0].province+"省"+data.result[0].city+"市"+data.result[0].town+"\n"+
+                        data.result[0].address+"\n"+data.result[1].address+"\n"+data.result[2].address+"\n"+data.result[3].address+"\n"+data.result[4].address;
+                },
+                erro:function (err) {
+                    alert(err.message);
+                }
             });
 
         }, false);
 
-
-        function emerge(data) {
-            document.getElementById("result").innerHTML = zipcode + "是"+data.result[0].province+"省"+data.result[0].city+"市"+data.result[0].town+"\n"+
-                data.result[0].address+"\n"+data.result[1].address+"\n"+data.result[2].address+"\n"+data.result[3].address+"\n"+data.result[4].address;
-
-        }
 
 </script>
 </body>

@@ -1,7 +1,7 @@
 
 .container{
     background-color: #00B7FF;
-    width: 500px;
+    width: 800px;
     height: 250px;
     margin: 0 auto;
     padding: 20px;
@@ -24,10 +24,16 @@
 }
 
 .input-group{
+    width: 800px;
 margin-bottom: 10px;
 
 }
 
+.warning{
+    color: red;
+    font-size: 15px;
+    display: none;
+}
 .tip{
     margin-left: 120px;
 }
