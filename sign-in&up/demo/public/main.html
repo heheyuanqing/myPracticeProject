@@ -17,7 +17,7 @@
     <div class="container">
         <div style="width: 250px;margin: 0 auto;margin-bottom: 20px">注册</div>
         <div>
-            <form action="http://172.0.0.1:3000" method="post">
+            <form action="success.html" method="post">
                 <div style="margin-bottom: 10px">
                     <span>手机号码：</span>
                     <input type="text" id="name">
@@ -44,7 +44,7 @@
             else{
                 xhr = new ActiveXObject("Microsoft.XMLHTTP");
             }
-            xhr.onreadystatechange = () => {
+            xhr.onreadystatechange = () =>  {
 
                 if (xhr.readyState === 4 &&xhr.status === 200){
                    var data = xhr.responseText;

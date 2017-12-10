@@ -23,8 +23,10 @@
 #### sign-in&up
 
 &emsp;&emsp;
+*两个demo的后台都未完成*
+##### &emsp;&emsp;- demo   登录/注册
 
-##### &emsp;&emsp;- 完成登录/注册的静态页面
+##### &emsp;&emsp;- demo2  注册
 
 &emsp;&emsp;
 
@@ -46,13 +48,11 @@
 
 &emsp;&emsp;
 
-#### &emsp;&emsp;- 对JSON数据进行解析
+#### &emsp;&emsp;- 对JSON数据进行解析——JSON数据的学习
 
 &emsp;&emsp;
 
-&emsp;&emsp;
 
-&emsp;&emsp;
 
 #### JSONP
 
