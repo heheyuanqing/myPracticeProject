@@ -7,7 +7,7 @@
 
 ##### &emsp;&emsp;- 主页中左侧消息滑动，以及右侧消息进行轮播
 
-##### &emsp;&emsp;- 在登陆页面中 （计划：使用node写一个小后台）
+##### &emsp;&emsp;- 在登陆页面中
 
 ##### &emsp;&emsp;- 在邮箱页面中 （计划使用node写一个小后台）
 
@@ -20,11 +20,11 @@
 &emsp;&emsp;
 
 
-#### sign-in&up
+#### login
 
 &emsp;&emsp;
-*两个demo的后台都未完成*
-##### &emsp;&emsp;- demo   登录/注册
+
+##### &emsp;&emsp;- demo   登录
 
 ##### &emsp;&emsp;- demo2  注册
 
