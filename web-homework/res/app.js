@@ -7,7 +7,11 @@ var bodyParser = require('body-parser');
 
 var login = require('./routes/login');
 var users = require('./routes/users');
-
+var logup = require('./routes/logup');
+var infor = require('./routes/getInfor');
+var appli = require('./routes/appli');
+var message = require('./routes/message');
+var xuandiao = require('./routes/xuandiao');
 var app = express();
 
 
@@ -21,6 +25,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', login);
+app.use('/',logup);
+app.use('/',infor);
+app.use('/',appli);
+app.use('/',message);
+app.use('/',xuandiao);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

@@ -1,0 +1,37 @@
+.nvg{
+    width: 150px;
+}
+.nvg ul{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.nvg ul li{
+    width: 150px;
+    background-color: #F8B313;
+    border-radius: 5%;
+    padding: 5px;
+    border-bottom: 0px;
+    margin-top: 15px;
+}
+
+.zhu form{
+    display: block;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+#result{
+    width: 500px;
+    font-size: 25px;
+    margin-left: 70px;
+
+
+}
+.appli table{
+margin-top: 50px;
+    margin-left: 50px;
+}
+.appli td{
+    width: 200px;
+    padding: 7px;
+    border: 2px solid;
+}

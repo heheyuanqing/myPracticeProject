@@ -20,6 +20,7 @@
     <!--自定义css和js文件-->
     <link rel="stylesheet" href="../stylesheets/moreStyle.css" type="text/css">
     <link rel="stylesheet" href="../stylesheets/sign.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/me.css">
 </head>
 <body>
 <div class="header" style="background-image: url(../images/header.jpg);width:100%;height: 200px;position: relative">
@@ -62,14 +63,43 @@
                 <div class="panel-heading" style="background-color: #F85B00;">
                     当前位置
                     <a href="index.html" style="margin-left: 10px;font-size: 15px;color:#363636;">首页</a>
-                    <span class="glyphicon glyphicon-menu-right"></span> 我的功能
+                    <span class="glyphicon glyphicon-menu-right"></span> 我
                 </div>
                 <div class="panel panel-body" style="height: 800px">
 
-                    <div  style="width: 350px;margin: 40px auto">
-                        <div class="title">登陆成功 ！</div>
-
-
+                    <div class="col-md-4 nvg" >
+                        <ul>
+                            <li><a href="result.html">查询选调结果</a></li>
+                            <li><a href="appli.html">申请选调</a></li>
+                            <li><a href="success.html">信箱投稿</a></li>
+                            <li><a href="">退出账号</a></li>
+                            <li><a href="">意见反馈</a></li>
+                            <li><a href="">更多</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 zhu">
+                        <div style="color: #954121;font-size: 20px;margin-left: 10px">信箱投稿</div>
+                        <form>
+                            <div class="input-group">
+                                <span class="input-group-addon">您的称呼：</span>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">电子邮箱：</span>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">联系电话：</span>
+                                <input type="text" class="form-control" id="tel">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" style="vertical-align: top">内&ensp;&ensp;&ensp;&ensp;容：</span>
+                                <textarea class="form-control" style="width: 400px;height: 200px" id="message"></textarea>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success" style="margin: 30px 60px" id="btn">提&ensp;&ensp;交</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -84,6 +114,6 @@
         XXX
     </div>
 </div>
-<script ></script>
+<script src="../javascript/message.js"></script>
 </body>
 </html>
