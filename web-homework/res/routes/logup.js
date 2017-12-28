@@ -18,7 +18,7 @@ router.get('/logup', function(req, res, next) {
 
     connection.connect();
 
-    var sq = 'insert into user (name,psw) values ('+name+','+psw+')';
+    var sq = 'insert into user (name,psw) values (\''+name+'\',\''+psw+'\')';
     connection.query(sq,function (err) {
         if (err){
             res.send(callback+"("+"{"+
