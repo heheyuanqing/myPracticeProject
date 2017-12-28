@@ -7,11 +7,13 @@
 
 ##### &emsp;&emsp;- 主页中左侧消息滑动，以及右侧消息进行轮播
 
-##### &emsp;&emsp;- 在登陆页面中
+##### &emsp;&emsp;- 创建了四个表（usr,student,message,application）,分别记录（用户登陆信息，选调信息，申请选调信息，投稿信息）
 
-##### &emsp;&emsp;- 在邮箱页面中 （计划使用node写一个小后台）
+##### &emsp;&emsp;- 登陆注册功能
 
-##### &emsp;&emsp;- 在主页中的每个链接中添加内容
+##### &emsp;&emsp;- 用户申请、查询选调以及投稿功能
+
+##### &emsp;&emsp;- 管理员（hyq）通过审核选调申请功能
 
 &emsp;&emsp;
 
