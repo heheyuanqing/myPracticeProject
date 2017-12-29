@@ -1,4 +1,4 @@
-# myPracticeProject
+# practiceProject
 &emsp;
 
 #### web-homework(bootstrap+nodejs)
